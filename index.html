@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Buon Compleanno</title>
+        <script src="https://kit.fontawesome.com/fd0d0cf834.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body id="body">
+        <div class="birthday-warning none" id="birthday-warning">
+            <p><span class="name">Fiammettina</span>, il sito sarà online al massimo un giorno, per adesso</p>
+        </div>
+
+        <div class="birthday-test" id="birthday-test">
+            <div class="question-test column none" id="question-test">
+                <h1>Ciao <span class="name">Fiamma</span>, come stai? <span>(Io spero bene)</span></h1>
+                <p>Sei pronta per vedere il tuo regalo di compleanno?</p>
+            </div>
+            
+            <div class="answer-test row none" id="answer-test">
+                <button type="button" class="btn-test" id="yes-btn" onclick="showGift()">Si</button>
+                <button type="button" class="btn-test" id="no-btn" onclick="hideGift()">No</button>
+            </div>
+        </div>
+
+        <div class="birthday-anticipation row none" id="birthday-anticipation">
+            <h1 id="anticipation-text"></h1>
+        </div>
+
+        <div class="birthday-gift column none" id="birthday-gift">
+            <div class="first-gift column gifts" id="first-gift">
+                <p>Ci sono tante cose che vorrei dirti...</p>
+                <p>Sono successe tante cose quest'anno alcune belle e altre brutte...</p>
+                <p>L'anno scorso è stato un bel anno, non trovi?</p>
+                <p>Cerchiamo di migliorare quest'ultimo anno insieme?</p>
+                <p>Non voglio dire troppo perché certe cose si dicono a parole faccia a faccia quindi non dirò tutto ma solo una parte.</p>
+            </div>
+
+            <div class="second-gift column gifts none" id="second-gift">
+                <p>Se ti chiedi perché non ti ho più salutato dopo la nostra "situazione"</p>
+                <p>È perché pensavo, e forse penso ancora, che io ti faccia del male.</p>
+                <p>Avrei molto di più da dirti, ma...</p>
+                <p>Un giorno mi dovrai sbloccare su whatsapp, lo sai vero?</p>
+                <p>Quando mi perdo un po' nei miei pensieri, la cosa che mi fa capire e ragionare è il ricordo dei tuoi occhi.</p>
+            </div>
+        </div>
+
+        <div class="birthday-choice column none" id="birthday-choice">
+            <div class="choice-text column">
+                <h2 class="column">Ora tocca a te... <span onclick="goToEnd()">(Se non vuoi clicca qui)</span></h2>
+                <p>Se vuoi la parte più speciale del regalo, mi devi mandare un messaggio...</p>
+            </div>
+            
+            <div class="choice-maker row">
+                <form action="https://formspree.io/f/mwpqjjpy" method="post" id="form" class="row">
+                    <input type="text" id="text" name="text" placeholder="Scrivi quello che vuoi :)">
+                    <button type="submit" id="text-btn">Invia</button>
+                </form>
+                
+                <div class="error-container none" id="error-container">
+                    <p id="error-text"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="birthday-submit row none" id="birthday-submit">
+            <p id="submit-text"></p>
+        </div>
+
+        <div class="birthday-advice none" id="birthday-advice">
+            <p>Fai F12 e vai sulla console per avere un indizio in più</p>
+        </div>
+
+        <div class="birthday-present row none" id="birthday-present">
+            <i class="fa-solid fa-fire-flame-curved name" id="flame-icon"></i>
+        </div>
+
+        <div class="birthday-special row none" id="birthday-special">
+            <div class="fake-special column" id="fake-special">
+                <h1 id="first-fake">Che io non ci provi</h1>
+                <h1 id="second-fake" class="none">Che io non ti saluti</h1>
+                <h1 id="third-fake" class="none">Che io non ti dimostri</h1>
+            </div>
+
+            <div class="real-special column none" id="real-special">
+                <h1 class="column">Sappi che: <span class="none" id="real-text">Io ti vorrò bene <span class="name">lo stesso</span> e <span class="name">per sempre</span>.</span></h1>
+            </div>
+        </div>
+
+        <div class="birthday-win row none" id="birthday-win">
+            <h1>Buon Compleanno, <span class="name">Benni</span>!</h1>
+        </div>
+
+        <div class="birthday-end column none" id="birthday-end">
+            <h1 id="first-end-text"></h1>
+            <h1 id="second-end-text" class="none"></h1>
+            <h1 id="third-end-text" class="none">Buon Compleanno, <span class="name">Benni</span>!</h1>
+        </div>
+
+        <div class="birthday-goodbye none" id="birthday-goodbye">
+            <h1 id="goodbye-text">Ciao <span class="name glow" id="little-flame"></span>.</h1>
+
+            <div class="birthday-message none" id="birthday-message">
+                <p>Piccola <span class="name">fiamma</span>, quando sei pronta per vedere il tuo regalo, riavvia il sito.</p>
+            </div>
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
+</html>

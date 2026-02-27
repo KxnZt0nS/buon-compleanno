@@ -1,0 +1,486 @@
+:root {
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --primary-color: #ffc0cb;
+    --secondary-color: #d9abb3;
+    --tertiary-color: #c2979e;
+    --quaternary-color: #ab848a;
+    --quinary-color: #96757b;
+    --senary-color: #85676c;
+    --septenary-color: #695255;
+    --octonary-color: #574447;
+    --nonary-color: #403234;
+    --denary-color:#2b2224;
+    --first-bgcolor: #f0c0c8;
+    --second-bgcolor: #ab878d;
+    --third-bgcolor: #664e52;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s all;
+    animation: background 3s infinite linear;
+}
+
+@keyframes background {
+    0% {
+        background: linear-gradient(135deg, var(--third-bgcolor), var(--first-bgcolor) 50%, var(--third-bgcolor));
+    }
+    25% {
+        background: linear-gradient(140deg, var(--third-bgcolor), var(--first-bgcolor) 50%, var(--third-bgcolor));
+    }
+    50% {
+        background: linear-gradient(145deg, var(--third-bgcolor), var(--first-bgcolor) 50%, var(--third-bgcolor));
+    }
+    75% {
+        background: linear-gradient(140deg, var(--third-bgcolor), var(--first-bgcolor) 50%, var(--third-bgcolor));
+    }
+    100% {
+        background: linear-gradient(135deg, var(--third-bgcolor), var(--first-bgcolor) 50%, var(--third-bgcolor));
+    }
+}
+
+@keyframes yesBackground {
+    0% {
+        background: linear-gradient(135deg, var(--quinary-color), var(--primary-color) 50%, var(--quinary-color));
+    }
+    25% {
+        background: linear-gradient(140deg, var(--quinary-color), var(--primary-color) 50%, var(--quinary-color));
+    }
+    50% {
+        background: linear-gradient(145deg, var(--quinary-color), var(--primary-color) 50%, var(--quinary-color));
+    }
+    75% {
+        background: linear-gradient(140deg, var(--quinary-color), var(--primary-color) 50%, var(--quinary-color));
+    }
+    100% {
+        background: linear-gradient(135deg, var(--quinary-color), var(--primary-color) 50%, var(--quinary-color));
+    }
+}
+
+@keyframes noBackground {
+    0% {
+        background: linear-gradient(135deg, var(--denary-color), var(--nonary-color) 50%, var(--denary-color));
+    }
+    25% {
+        background: linear-gradient(140deg, var(--denary-color), var(--nonary-color) 50%, var(--denary-color));
+    }
+    50% {
+        background: linear-gradient(145deg, var(--denary-color), var(--nonary-color) 50%, var(--denary-color));
+    }
+    75% {
+        background: linear-gradient(140deg, var(--denary-color), var(--nonary-color) 50%, var(--denary-color));
+    }
+    100% {
+        background: linear-gradient(135deg, var(--denary-color), var(--nonary-color) 50%, var(--denary-color));
+    }
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.none {
+    display: none;
+}
+
+.birthday-warning {
+    top: 10px;
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    animation: showMessage 2s linear forwards;
+    background-color: var(--tertiary-color);
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.birthday-test {
+    width: 50%;
+    height: 40vh;
+    text-align: center;
+    border-radius: 25px;
+    justify-content: space-evenly;
+    animation: appear 2s linear forwards;
+    border: 2px solid var(--white-color);
+}
+
+.birthday-test:hover {
+    color: var(--secondary-color);
+    border: none;
+    box-shadow: 0 0 10px 5px var(--octonary-color);
+    background-color: var(--octonary-color);
+    transition: 0.3s;
+}
+
+.birthday-test:hover .question-test {
+    border: none;
+}
+
+.birthday-test:hover .answer-test {
+    border: none;
+}
+
+.question-test {
+    width: 100%;
+    height: 60%;
+    animation: appear 2s linear forwards;
+    border-bottom: 1px solid var(--white-color);
+}
+
+.question-test h1 {
+    font-size: 3em;
+}
+
+.question-test h1 span:last-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    font-size: 1em;
+    background: linear-gradient(to top, var(--secondary-color), var(--quaternary-color) 50%, var(--senary-color));
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.question-test h1 span:last-of-type {
+    font-size: 0.25em;
+}
+
+.question-test p {
+    font-size: 1.25em;
+    margin-top: 10px;
+}
+
+.answer-test {
+    width: 100%;
+    height: 40%;
+    justify-content: space-around;
+    animation: appear 2s linear forwards;
+    border-top: 1px solid var(--white-color);
+}
+
+.btn-test {
+    width: 15%;
+    height: 40%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: var(--white-color);
+    background-color: var(--tertiary-color);
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    animation: btns 2s infinite linear;
+    box-shadow: 0 0 10px 5px var(--tertiary-color);
+}
+
+@keyframes btns {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#yes-btn:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 7.5px 2.5px var(--primary-color);
+}
+
+#no-btn:hover {
+    background-color: var(--nonary-color);
+    box-shadow: 0 0 7.5px 2.5px var(--nonary-color);
+}
+
+.btn-test:hover {
+    transition: 0.3s;
+    animation: shake 0.5s infinite linear;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(2deg);
+    }
+    50% {
+        transform: rotate(-2deg);
+    }
+    75% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.birthday-anticipation {
+    width: 50%;
+    height: 30vh;
+}
+
+.birthday-anticipation h1 {
+    font-size: 3em;
+}
+
+.birthday-gift {
+    width: 50%;
+    height: 50vh;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+    animation: appear 1s linear forwards;
+    color: var(--tertiary-color);
+    box-shadow: 0 0 10px var(--white-color);
+    background-color: var(--white-color);
+}
+
+.gifts {
+    width: 90%;
+    height: 90%;
+}
+
+.gifts p {
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.birthday-choice {
+    width: 50%;
+    height: 50vh;
+    border-radius: 25px;
+    justify-content: space-evenly;
+    animation: appear 2s linear forwards;
+    color: var(--secondary-color);
+    background-color: var(--white-color);
+}
+
+.choice-text {
+    width: 100%;
+}
+
+.choice-text h2 {
+    font-size: 3em;
+}
+
+.choice-text h2 span {
+    cursor: pointer;
+    font-size: 0.25em;
+}
+
+.choice-text h2 span:hover {
+    color: var(--black-color);
+}
+
+.choice-text p {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.choice-maker {
+    width: 100%;
+    height: 20%;
+}
+
+#form {
+    width: 80%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+#text {
+    width: 70%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    color: var(--white-color);
+    background-color: var(--tertiary-color);
+    font-size: 1.25em;
+    font-family: 'Poppins', sans-serif;
+}
+
+#text::placeholder {
+    color: var(--white-color);
+}
+
+#text:focus {
+    background-color: var(--secondary-color);
+}
+
+#text-btn {
+    width: 30%;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--white-color);
+    background-color: var(--quinary-color);
+    font-size: 1.25em;
+    font-family: 'Poppins', sans-serif;
+}
+
+#text-btn:hover {
+    transform: translateX(3px);
+    transition: 0.3s;
+    background-color: var(--quaternary-color);
+}
+
+.error-container, .birthday-advice {
+    top: 10px;
+    position: absolute;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    animation: showMessage 2s linear forwards;
+}
+
+.birthday-submit, .birthday-present, .birthday-win {
+    width: 50%;
+    height: 50vh;
+}
+
+.birthday-submit p, .birthday-present i {
+    font-size: 2em;
+}
+
+.birthday-present i:hover {
+    cursor: pointer;
+}
+
+.birthday-special {
+    width: 45%;
+    height: 50vh;
+}
+
+.fake-special h1 {
+    font-size: 3em;
+    animation: appear 1s linear forwards;
+    text-shadow: 0 0 10px var(--quinary-color);
+}
+
+.real-special {
+    text-align: center;
+}
+
+.real-special h1 {
+    font-size: 3em;
+    text-shadow: 0 0 10px var(--quinary-color);
+}
+
+.real-special span:first-of-type {
+    animation: appear 1s linear forwards;
+}
+
+.birthday-win h1 {
+    font-size: 3em;
+    animation: appear 2s linear forwards;
+}
+
+.birthday-end {
+    width: 50%;
+    height: 70vh;
+    text-align: center;
+    animation: box 2s infinite linear;
+}
+
+@keyframes box {
+    0% {
+        text-shadow: 0 0 10px var(--quinary-color);
+    }
+    50% {
+        text-shadow: 0 0 5px var(--quinary-color);
+    }
+    100% {
+        text-shadow: 0 0 10px var(--quinary-color);
+    }
+}
+
+.birthday-end h1 {
+    font-size: 3em;
+    animation: appear 2s linear forwards;
+}
+
+.birthday-goodbye h1 {
+    font-size: 3em;
+}
+
+.glow {
+    text-shadow: 0 0 10px var(--denary-color);
+}
+
+.birthday-message {
+    bottom: 10px;
+    left: 10px;
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    animation: showMessage 2s linear forwards;
+    background-color: var(--octonary-color);
+}
+
+@keyframes showMessage {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hideMessage {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
